@@ -1,0 +1,14 @@
+Multi-fluid linear code (author Amol Upadhye) 
+
+This is a linear perturbation code for evolving massive neutrinos using the multi-fluid framework by Dupuy and Bernardeau in the non-relativistic, sub-horizon limit. 
+
+To compile the code: 
+  Open the Makefile. Edit the gcc paths to the correct location on your system. Note for mac users, the gcc paths must be pointing to an actual gcc compiler. The mac native clang compiler won't work with openmpi. If you insist on using the clang compiler, you must remove the -fopenmp flag (the code will still work exactly the same, but it won't be parallelised). Then simply type make all. 
+
+To run the code: 
+  - the source file nu_mflr.c contains all the comsological parameters and precision parameters. 
+  - cosmological parameters to set: h, Omega_cb, Omega_nu
+  - precision parameters to set: N_tau, N_mu, nk, nz
+  - remake the code every time you reset the parameters 
+  - to run the code simply execute the binary nu_mflr in terminal
+  - the output are printed in the terminal
